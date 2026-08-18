@@ -1,8 +1,8 @@
 class Hl7probe < Formula
   desc "Inspect and validate HL7 v2 messages"
   homepage "https://github.com/sudhi001/hl7probe"
-  url "https://github.com/sudhi001/hl7probe/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "90547fb860b5b45c5820dcafa7270cdb1b1883b1fafb45efc5a2c3b05313b8bd"
+  url "https://github.com/sudhi001/hl7probe/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "15bcbb77f316d2520e08890bb5f994c608ea7b7dd8e88861b8e61cfd663784d6"
   license "MIT"
   head "https://github.com/sudhi001/hl7probe.git", branch: "main"
 
@@ -20,11 +20,11 @@ class Hl7probe < Formula
       PV1|1|I|ER^101^A|||1234^Adams^Alice||||||||||||V1\r
     HL7
 
-    output = shell_output("#{bin}/hl7test #{testpath}/admit.hl7 --color never")
+    output = shell_output("#{bin}/hl7probe #{testpath}/admit.hl7 --color never")
     assert_match "ADT^A01", output
     assert_match "Patient Name", output
 
-    assert_equal "Smith", shell_output("#{bin}/hl7test -f PID-5.1 #{testpath}/admit.hl7").strip
-    assert_match version.to_s, shell_output("#{bin}/hl7test --version")
+    assert_equal "Smith", shell_output("#{bin}/hl7probe -f PID-5.1 #{testpath}/admit.hl7").strip
+    assert_match version.to_s, shell_output("#{bin}/hl7probe --version")
   end
 end
