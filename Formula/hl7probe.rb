@@ -1,8 +1,8 @@
 class Hl7probe < Formula
   desc "Inspect and validate HL7 v2 messages"
   homepage "https://github.com/sudhi001/hl7probe"
-  url "https://github.com/sudhi001/hl7probe/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "a7619d5c384d69ba95b3d0ecf5108c0362f743bbb053332241f9d1c107ba3240"
+  url "https://github.com/sudhi001/hl7probe/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "40d58f316adeda570e95bfb7d0a1bbc49b229fcbdfcd527da152da3a79540296"
   license "MIT"
   head "https://github.com/sudhi001/hl7probe.git", branch: "main"
 
