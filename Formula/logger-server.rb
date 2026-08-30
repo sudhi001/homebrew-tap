@@ -54,7 +54,7 @@ class LoggerServer < Formula
       # Wait for it to bind rather than sleeping a fixed amount.
       30.times do
         sleep 0.2
-        break if system("curl", "-sf", "http://127.0.0.1:#{port}/healthz", out: File::NULL)
+        break if quiet_system("curl", "-sf", "http://127.0.0.1:#{port}/healthz")
       end
 
       assert_equal "ok", shell_output("curl -s http://127.0.0.1:#{port}/healthz")
