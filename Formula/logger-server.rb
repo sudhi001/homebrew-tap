@@ -1,8 +1,8 @@
 class LoggerServer < Formula
   desc "Self-hosted remote logger for mobile apps, with a live browser tail"
   homepage "https://github.com/sudhi001/logger_server"
-  url "https://github.com/sudhi001/logger_server/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "b52ed96d5146cb18288f0f5c90dd0359bda58bfd529ba1271c57ab84a5830059"
+  url "https://github.com/sudhi001/logger_server/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "01677c8be9c624fa81d5b2022dde26e86c274bc07d7619112287191973ea198b"
   license "MIT"
   head "https://github.com/sudhi001/logger_server.git", branch: "main"
 
